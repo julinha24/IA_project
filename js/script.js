@@ -24,7 +24,7 @@ function mostraPergunta() {
     mostraAlternativas();
 }
 
-function mostraAlternativas(){
+function mostraAlternativas(){name
     for(const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
@@ -55,4 +55,7 @@ function joganovamente(){
 }
 
 
-mostraPergunta();
+function substituinome(){
+    for(const pergunta of perguntas){
+        pergunta.enunciado=pergunta.enunciado.replace(/você/g,nome);
+        
